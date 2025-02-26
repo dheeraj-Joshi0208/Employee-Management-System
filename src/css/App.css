@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+* {
+  font-family: poppins;
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #252525;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #706f6e; /* Hover color */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #333; /* Track color */
+  }
+}
