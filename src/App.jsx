@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <div className="bg-[#1c1c1c] text-gray-200">
-        <div className="bg-black text-gray-200 h-screen">
+        <div className="bg-black text-gray-200">
           {/* <Login /> */}
           <EmployeeDashboard />
         </div>
