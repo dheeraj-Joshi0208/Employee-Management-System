@@ -24,4 +24,4 @@ npm run dev
 - `npm run dev --watch`: Start development server
 
 
-Project Link: [https://github.com/yourusername/Employee-Management-Dashboard](https://github.com/yourusername/Employee-Management-Dashboard)
+Project Link: [https://github.com/dheeraj-joshi0208/Employee-Management-Dashboard](https://github.com/yourusername/Employee-Management-Dashboard)
