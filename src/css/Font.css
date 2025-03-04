@@ -1,0 +1,8 @@
+@font-face {
+  font-family: NeueMachina;
+  src: url("../fonts/NeueMachina-Regular.ttf");
+}
+
+* {
+  font-family: NeueMachina;
+}
