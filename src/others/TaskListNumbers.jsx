@@ -7,14 +7,14 @@ const tasks = [
 
 export default function TaskList() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20">
+    <div className="mt-20 grid grid-cols-1 gap-4 md:grid-cols-2">
       {tasks.map((task, index) => (
         <div
           key={index}
-          className={`${task.className} p-6 rounded-lg transition-transform hover:scale-102 ${task.bgColor}`}
+          className={`${task.className} rounded-lg p-6 transition-transform hover:scale-102 ${task.bgColor}`}
         >
           <div className="flex flex-col text-white">
-            <span className="text-4xl font-bold mb-2">{task.count}</span>
+            <span className="mb-2 text-4xl font-bold">{task.count}</span>
             <span className="text-xl">{task.title}</span>
           </div>
         </div>

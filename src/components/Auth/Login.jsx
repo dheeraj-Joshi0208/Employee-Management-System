@@ -2,11 +2,7 @@ import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
-<<<<<<< HEAD
   const [password, setPassword] = useState("");
-=======
-  const [password, setPassword] = useState(""); // Fixed typo
->>>>>>> cf03b7ed3d1dbee818addf271f678f58c153275a
 
   const submitHandler = (event) => {
     event.preventDefault();
@@ -17,33 +13,39 @@ const Login = () => {
   };
 
   return (
-    <div className="h-screen flex items-center justify-center bg-black">
-      <div className="border border-emerald-300 p-10 rounded-2xl bg-zinc-900">
-        <form onSubmit={submitHandler} className="flex flex-col gap-4 w-96">
-          <input
-            onChange={(event) => setEmail(event.target.value)}
-            required
-            value={email}
-            type="email"
-            placeholder="Enter your email"
-            className="border-2 border-emerald-500 bg-transparent rounded-full py-3 px-4 text-white outline-none placeholder-gray-400 w-full focus:border-emerald-300 focus:ring-1 focus:ring-emerald-300"
-          />
-          <input
-<<<<<<< HEAD
-            onChange={(event) => setPassword(event.target.value)}
-            required
-            value={password}
-=======
-            onChange={(event) => setPassword(event.target.value)} // Fixed typo
-            required
-            value={password} // Fixed typo
->>>>>>> cf03b7ed3d1dbee818addf271f678f58c153275a
-            type="password"
-            placeholder="Enter your password"
-            className="border-2 border-emerald-500 bg-transparent rounded-full py-3 px-4 text-white outline-none placeholder-gray-400 w-full focus:border-emerald-300 focus:ring-1 focus:ring-emerald-300"
-          />
-
-          <button className="bg-emerald-400 text-white py-3 px-4 rounded-full hover:bg-emerald-500 cursor-pointer">
+    <div className="flex items-center justify-center p-6 rounded-2xl">
+      <div className="rounded-2xl border border-gray-300 bg-[#FFFFFF] p-8 shadow-lg">
+        <form
+          onSubmit={submitHandler}
+          className="flex w-[420px] flex-col gap-4 border-gray-800"
+        >
+          <h1 className="text-3xl font-bold text-[#09090B]">Login</h1>
+          <p className="text-[#71717A]">
+            Enter your email below to login to your account
+          </p>
+          <div className="grid gap-1.5 pt-3">
+            <label className="text-[#09090B]">Email</label>
+            <input
+              onChange={(event) => setEmail(event.target.value)}
+              required
+              value={email}
+              type="email"
+              placeholder="Enter your email"
+              className="w-full rounded-[10px] border border-gray-300 px-4 py-3 text-black outline-none"
+            />
+          </div>
+          <div className="grid gap-1.5 pt-3">
+            <label className="text-[#09090B]">Password</label>
+            <input
+              onChange={(event) => setPassword(event.target.value)}
+              required
+              value={password}
+              type="password"
+              placeholder="Enter your password"
+              className="w-full rounded-[10px] border border-gray-300 px-4 py-3 text-black outline-none"
+            />
+          </div>
+          <button className="cursor-pointer rounded-[10px] bg-black px-4 py-3 text-white shadow-md hover:bg-gray-800">
             Log in
           </button>
         </form>

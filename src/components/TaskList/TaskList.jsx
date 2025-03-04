@@ -35,19 +35,19 @@ const TaskList = () => {
   ];
 
   return (
-    <div className="flex flex-wrap gap-6 p-6 mt-10 max-h-74 overflow-y-auto">
+    <div className="mt-10 flex max-h-74 flex-wrap gap-6 overflow-y-auto p-6">
       {tasks.map((task, index) => (
         <div
           key={index}
-          className={`border rounded-lg shadow-md p-4 w-7xl ${task.bgColor}`}
+          className={`w-7xl rounded-lg border p-4 shadow-md ${task.bgColor}`}
         >
-          <div className="flex justify-between items-center">
-            <button className="bg-red-500  py-1 px-6 rounded-full mb-4">
+          <div className="flex items-center justify-between">
+            <button className="mb-4 rounded-full bg-red-500 px-6 py-1">
               {task.button}
             </button>
-            <div className="text-sm mb-4">{task.date}</div>
+            <div className="mb-4 text-sm">{task.date}</div>
           </div>
-          <h3 className="text-2xl font-semibold mb-4">{task.heading}</h3>
+          <h3 className="mb-4 text-2xl font-semibold">{task.heading}</h3>
           <p className="text-md">{task.paragraph}</p>
         </div>
       ))}
