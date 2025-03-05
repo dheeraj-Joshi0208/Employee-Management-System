@@ -4,44 +4,47 @@ const TaskList = () => {
   const tasks = [
     {
       id: 1,
-      button: "Girl",
-      date: "2101-11-14",
+      role: "Content Creator",
+      date: "2024-03-10",
       heading: "Make a YouTube video.",
       paragraph:
-        "Frequently guess worth holding, especially when the queen's goose spends time buried.",
+        "Plan, script, and record a video on tech trends for your channel.",
     },
     {
       id: 2,
-      button: "Boy",
-      date: "2102-05-21",
+      role: "Writer",
+      date: "2024-03-12",
       heading: "Write a blog post.",
       paragraph:
-        "The writer carefully crafted each sentence, ensuring clarity and engagement.",
+        "Research, draft, and publish an informative blog post on web development.",
     },
     {
       id: 3,
-      button: "Student",
-      date: "2103-08-30",
+      role: "Student",
+      date: "2024-03-15",
       heading: "Complete the project report.",
       paragraph:
-        "Gather all research data, analyze findings, and compile them into a structured report.",
+        "Compile research findings and structure them into a formal project report.",
     },
     {
       id: 4,
-      button: "Developer",
-      date: "2104-12-10",
+      role: "Developer",
+      date: "2024-03-18",
       heading: "Fix bugs in the application.",
       paragraph:
-        "Identify reported issues, debug the code, and implement necessary fixes.",
+        "Identify and resolve reported issues to enhance application stability.",
     },
   ];
 
   return (
     <div className="mt-10 flex max-h-74 flex-wrap items-center justify-center gap-6 overflow-y-auto p-6">
       {tasks.map((task) => (
-        <div key={task.id} className={`w-7xl rounded-lg border p-4 shadow-md`}>
+        <div
+          key={task.id}
+          className={`w-7xl rounded-lg border border-gray-300 p-4 shadow-md`}
+        >
           <div className="flex items-center justify-between">
-            <Button text={`${task.button}`} className="rounded-4xl" />
+            <Button text={`${task.role}`} className="rounded-4xl" />
             <div className="text-sm">{task.date}</div>
           </div>
           <h3 className="mt-2 text-2xl font-semibold">{task.heading}</h3>
