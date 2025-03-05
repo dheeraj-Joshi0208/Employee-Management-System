@@ -1,3 +1,5 @@
+import Button from "../Button/Button";
+
 const TaskList = () => {
   const tasks = [
     {
@@ -39,13 +41,11 @@ const TaskList = () => {
       {tasks.map((task) => (
         <div key={task.id} className={`w-7xl rounded-lg border p-4 shadow-md`}>
           <div className="flex items-center justify-between">
-            <button className="mb-4 rounded-full bg-red-500 px-6 py-1">
-              {task.button}
-            </button>
-            <div className="mb-4 text-sm">{task.date}</div>
+            <Button text={`${task.button}`} className="rounded-4xl" />
+            <div className="text-sm">{task.date}</div>
           </div>
-          <h3 className="mb-4 text-2xl font-semibold">{task.heading}</h3>
-          <p className="text-md">{task.paragraph}</p>
+          <h3 className="mt-2 text-2xl font-semibold">{task.heading}</h3>
+          <p className="text-lg">{task.paragraph}</p>
         </div>
       ))}
     </div>
