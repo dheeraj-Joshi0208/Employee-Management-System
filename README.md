@@ -2,7 +2,7 @@
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/Employee-Management-Dashboard.git
+git clone (https://github.com/dheeraj-Joshi0208/Employee-Management-System)
 ```
 
 2. Navigate to project directory
