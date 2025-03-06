@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center rounded-lg p-3 sm:rounded-xl sm:p-4 md:rounded-2xl md:p-5 lg:p-6">
+    <div className="flex items-center justify-center min-h-screen rounded-lg p-3 sm:rounded-xl sm:p-4 md:rounded-2xl md:p-5 lg:p-6">
       <div className="w-full max-w-xs rounded-lg border border-gray-300 bg-white p-3 shadow-md sm:max-w-sm sm:rounded-xl sm:p-4 sm:shadow-lg md:max-w-md md:rounded-2xl md:p-6 lg:max-w-lg lg:p-8">
         <form
           onSubmit={submitHandler}
