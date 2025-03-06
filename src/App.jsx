@@ -1,20 +1,22 @@
 import "./css/App.css";
 import "./css/Font.css";
-import Login from "./components/Auth/Login";
+// import Login from "./components/Auth/Login";
+import { useState } from "react";
+import AdminDashboard from "./components/Dashboard/AdminDashboard";
 // import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
-import { useEffect } from "react";
-import { getLocalStorage } from "./utils/localStorage";
 
 function App() {
-  useEffect(() => {
-    getLocalStorage();
-  }, []);
+  const [user, setUser] = useState(null);
+  const loginHandler = (email, password) => {
+    setUser({ email, password });
+  };
 
   return (
     <>
-      <div className="container m-auto flex min-h-screen w-full items-center justify-center p-6">
-        <Login />
+      <div className="container m-auto min-h-screen p-6">
+        {/* {!user ? <Login /> : ""} */}
         {/* <EmployeeDashboard /> */}
+        <AdminDashboard />
       </div>
     </>
   );
