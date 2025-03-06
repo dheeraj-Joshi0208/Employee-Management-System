@@ -4,7 +4,7 @@ const TaskList = () => {
   const tasks = [
     {
       id: 1,
-      role: "Content Creator",
+      role: "Creator",
       date: "2024-03-10",
       heading: "Make a YouTube video.",
       paragraph:

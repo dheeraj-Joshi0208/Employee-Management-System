@@ -13,39 +13,41 @@ const Login = () => {
   };
 
   return (
-    <div className="flex items-center justify-center p-6 rounded-2xl">
-      <div className="rounded-2xl border border-gray-300 bg-[#FFFFFF] p-8 shadow-lg">
+    <div className="flex items-center justify-center rounded-2xl p-4 md:p-6">
+      <div className="w-full max-w-lg rounded-2xl border border-gray-300 bg-white p-4 shadow-lg md:p-8">
         <form
           onSubmit={submitHandler}
-          className="flex w-[420px] flex-col gap-4 border-gray-800"
+          className="flex flex-col gap-4 border-gray-800"
         >
-          <h1 className="text-3xl font-bold text-[#09090B]">Login</h1>
-          <p className="text-[#71717A]">
+          <h1 className="text-2xl font-bold text-gray-900 md:text-4xl">
+            Login
+          </h1>
+          <p className="text-gray-500 md:text-xl">
             Enter your email below to login to your account
           </p>
           <div className="grid gap-1.5 pt-3">
-            <label className="text-[#09090B]">Email</label>
+            <label className="text-gray-900 md:text-xl">Email</label>
             <input
               onChange={(event) => setEmail(event.target.value)}
               required
               value={email}
               type="email"
               placeholder="Enter your email"
-              className="w-full rounded-[10px] border border-gray-300 px-4 py-3 text-black outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-black outline-none"
             />
           </div>
-          <div className="grid gap-1.5 pt-3">
-            <label className="text-[#09090B]">Password</label>
+          <div className="grid gap-1.5 pt-3 md:text-xl">
+            <label className="text-gray-900">Password</label>
             <input
               onChange={(event) => setPassword(event.target.value)}
               required
               value={password}
               type="password"
               placeholder="Enter your password"
-              className="w-full rounded-[10px] border border-gray-300 px-4 py-3 text-black outline-none"
+              className="w-full rounded-lg border border-gray-300 px-4 py-3 text-black outline-none"
             />
           </div>
-          <button className="cursor-pointer rounded-[10px] bg-black px-4 py-3 text-white shadow-md hover:bg-gray-800">
+          <button className="mt-2 cursor-pointer rounded-lg bg-black px-4 py-3 text-white shadow-md hover:bg-gray-800 md:text-xl">
             Log in
           </button>
         </form>
