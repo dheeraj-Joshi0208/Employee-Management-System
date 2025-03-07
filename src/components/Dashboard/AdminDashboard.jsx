@@ -23,7 +23,7 @@ const AdminDashboard = () => {
                 <label className="block text-sm font-medium">Description</label>
                 <textarea
                   placeholder="Detailed description of task (Max 500 words)"
-                  className="mt-1 w-full rounded-md border border-gray-200 p-2"
+                  className="mt-1 h-48 w-full rounded-md border border-gray-200 p-2"
                 />
               </div>
             </div>
@@ -51,7 +51,7 @@ const AdminDashboard = () => {
                   className="mt-1 w-full rounded-md border border-gray-200 p-2"
                 />
               </div>
-              <Button text="Create Task" />
+              <Button text="Create Task" className="mt-3"/>
             </div>
           </form>
         </div>
