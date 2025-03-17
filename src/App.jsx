@@ -1,22 +1,27 @@
 import "./css/App.css";
 import "./css/Font.css";
-// import Login from "./components/Auth/Login";
 import { useState } from "react";
+import Login from "./components/Auth/Login";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
-// import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
+import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 
 function App() {
   const [user, setUser] = useState(null);
   const loginHandler = (email, password) => {
-    setUser({ email, password });
+    if (email == "admin@123.com" && password == "admin@123") {
+      setUser("admin");
+    } else if (email == "user@123.com" && password == "user@123") {
+      setUser("user");
+    } else {
+      console.log("Invalid credentials");
+    }
   };
 
   return (
     <>
-      <div className="container m-auto min-h-screen p-6">
-        {/* {!user ? <Login /> : ""} */}
-        {/* <EmployeeDashboard /> */}
-        <AdminDashboard />
+      <div className="mx-auto min-h-screen max-w-screen-xl">
+        {!user ? <Login loginHandler={loginHandler} /> : null}
+        {user === "admin" ? <AdminDashboard /> : <EmployeeDashboard />}
       </div>
     </>
   );

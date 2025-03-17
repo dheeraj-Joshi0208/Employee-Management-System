@@ -6,7 +6,7 @@ const Header = () => {
       <h1 className="text-lg font-medium text-black sm:text-xl md:text-2xl lg:text-3xl">
         Hello <br className="xs:hidden" />
         <span className="text-xl font-extrabold sm:text-2xl md:text-3xl lg:text-4xl">
-          Sarthak✌️
+          ✌️
         </span>
       </h1>
       <Button
