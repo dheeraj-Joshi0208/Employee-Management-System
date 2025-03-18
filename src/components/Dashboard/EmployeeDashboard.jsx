@@ -4,7 +4,7 @@ import TaskList from "../TaskList/TaskList";
 
 const EmployeeDashboard = () => {
   return (
-    <div className="">
+    <div>
       <Header />
       <TaskListNumbers />
       <TaskList />
