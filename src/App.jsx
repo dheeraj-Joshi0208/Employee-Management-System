@@ -4,6 +4,7 @@ import { useState } from "react";
 import Login from "./components/Auth/Login";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
+import { useContext } from "react";
 import { AuthContext } from "./context/AuthProvider";
 
 function App() {
@@ -14,13 +15,18 @@ function App() {
     else console.log("Invalid credentials");
   };
 
-  const data = AuthContext(AuthContext);
+  const data = useContext(AuthContext);
 
   return (
     <>
       <div className="mx-auto min-h-screen max-w-screen-xl">
-        {!user ? <Login loginHandler={loginHandler} /> : null}
-        {user === "admin" ? <AdminDashboard /> : <EmployeeDashboard />}
+        {!user ? (
+          <Login loginHandler={loginHandler} />
+        ) : user === "admin" ? (
+          <AdminDashboard />
+        ) : (
+          <EmployeeDashboard />
+        )}
       </div>
     </>
   );

@@ -1,12 +1,20 @@
-import PropTypes from "propTypes";
-import { createContext } from "react";
+import PropTypes from "prop-types";
+import { createContext, useEffect, useState } from "react";
+import { getLocalStorage } from "../utils/localStorage";
 
-export const AuthContext = createContext;
+export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
+  const [userData, setUserData] = useState(null);
+  useEffect(() => {
+    const { employees, admin } = getLocalStorage();
+    setUserData({ employees, admin });
+  }, []);
+
+  const data = getLocalStorage();
+  console.log(data);
+
   return (
-    <AuthContext.Provider value={{ isAuthenticated: true }}>
-      {children}
-    </AuthContext.Provider>
+    <AuthContext.Provider value={{ userData }}>{children}</AuthContext.Provider>
   );
 };
 
