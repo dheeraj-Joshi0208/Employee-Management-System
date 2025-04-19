@@ -1,8 +1,8 @@
 import PropTypes from "prop-types";
-import { createContext, useEffect, useState } from "react";
+import { AuthContext } from "./AuthContext";
+import { useEffect, useState } from "react";
 import { getLocalStorage } from "../utils/localStorage";
 
-export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [userData, setUserData] = useState(null);
   useEffect(() => {
