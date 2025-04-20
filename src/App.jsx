@@ -4,8 +4,6 @@ import { useState } from "react";
 import Login from "./components/Auth/Login";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
-// import { useContext } from "react";
-// import { AuthContext } from "./context/AuthProvider";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -15,7 +13,7 @@ function App() {
     else alert("Invalid credentials");
   };
 
-  // const data = useContext(AuthContext);  
+  // const data = useContext(AuthContext);
 
   return (
     <>
